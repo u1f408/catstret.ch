@@ -1,0 +1,115 @@
+---
+template: false
+---
+
+/* this selectively overrides things in main.css */
+
+:root {
+	--background: hsla(365, 100%, 100%, 1);
+	--foreground: hsla(0, 0%, 0%, 1);
+
+	--header-primary--link: hsla(240, 100%, 50%, 1);
+	--header-primary--link-focus: var(--header-primary--link);
+	--header-primary--link-brand-focus: var(--header-primary--link-brand);
+
+	--footer-primary--background: var(--foreground);
+	--footer-primary--foreground: var(--background);
+	--footer-primary--border: var(--foreground);
+	--footer-primary--font-size: 0.8rem;
+	--footer-primary--padding: 0.5rem;
+}
+
+html
+{
+	font: 100%/1.125 serif;
+}
+
+body
+{
+	position: relative;
+}
+
+.main-container
+{
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 0;
+	padding: 0;
+}
+
+header.primary
+{
+	padding: 1rem;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid var(--foreground);
+}
+
+header.primary a
+{
+	text-decoration: underline;
+	padding: 0;
+}
+
+header.primary a:not(:last-child)
+{
+	margin-bottom: 1rem;
+}
+
+header.primary a[aria-selected]:not(.brand)::before
+{
+	content: "\0020\27a4\0020";
+}
+
+header.primary a.brand
+{
+	font-size: 1.75rem;
+}
+
+header.primary a:hover,
+header.primary a:focus
+{
+	background: transparent !important;
+}
+
+.content-container
+{
+	padding: 1rem;
+}
+
+.content-container h1
+{
+	margin: 0 0 2rem 0;
+	border-bottom: none;
+}
+
+@media screen and (min-width: 768px)
+{
+	.main-container
+	{
+		position: static;
+		max-height: calc(100vh - (var(--footer-primary--font-size) + (var(--footer-primary--padding) * 2) + 0.2rem));
+
+		display: grid;
+		grid-template-columns: minmax(200px, 15vw) 6fr;
+		grid-column-gap: 0;
+		place-items: stretch;
+		justify-content: stretch;
+
+		padding: 0;
+		max-width: 100vw;
+	}
+
+	.content-container
+	{
+		margin-bottom: calc(-1rem + 2px);
+		overflow: scroll;
+	}
+
+	header.primary
+	{
+		border-bottom: none;
+		border-right: 1px solid var(--foreground);
+	}
+}

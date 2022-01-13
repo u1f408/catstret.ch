@@ -1,0 +1,10 @@
+SITEVAR_TITLE="catstret.ch"
+#SITEVAR_STYLESHEET_EXTRA="/styles/ancient.css"
+
+SOURCE_FLATFILE_CLASS="\\Grip\\Source\\FlatFileSource"
+SOURCE_FLATFILE_PATH="./content"
+
+SOURCE_PLURALKIT_CLASS="\\GripExt\\Source\\PluralKitSource"
+SOURCE_PLURALKIT_SLUG="/system"
+SOURCE_PLURALKIT_SYSTEM="kitty"
+SOURCE_PLURALKIT_DESCRIPTION_DELIM="-+-+-"

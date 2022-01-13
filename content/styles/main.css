@@ -1,0 +1,243 @@
+---
+template: false
+---
+
+:root {
+	--background: hsla(300, 100%, 98%, 1);
+	--foreground: hsla(300, 5%, 5%, 1);
+	--font-size: 110%;
+	--font-line-height: 1.5;
+	--font-stack: sans-serif;
+
+	--header-primary--link: hsla(170, 100%, 25%, 1);
+	--header-primary--link-focus: hsla(170, 100%, 98%, 1);
+	--header-primary--link-brand: hsla(330, 50%, 55%, 1);
+	--header-primary--link-brand-focus: hsla(330, 55%, 98%, 1);
+
+	--footer-primary--background: transparent;
+	--footer-primary--foreground: hsla(300, 5%, 30%, 1);
+	--footer-primary--font-size: 0.7rem;
+	--footer-primary--padding: 0.5rem;
+	--footer-primary--border: transparent;
+
+	--syscard--background: hsla(360, 100%, 100%, 1);
+	--syscard--border: hsla(0, 0%, 0%, 1);
+	--syscard--avatar-size: 6rem;
+	--syscard--avatar-border: hsla(0, 0%, 0%, 1);
+	--syscard--badge-background: hsla(220, 100%, 60%, 1);
+	--syscard--badge-foreground: hsla(360, 100%, 100%, 1);
+}
+
+*,
+*::before,
+*::after
+{
+	box-sizing: border-box;
+}
+
+html,
+body
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-width: 100vw;
+	min-height: 100vh;
+}
+
+html
+{
+	display: flex;
+	background: var(--background);
+	color: var(--foreground);
+
+	font: var(--font-size) var(--font-stack);
+	line-height: var(--font-line-height);
+}
+
+body
+{
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.main-container
+{
+	flex: 1;
+	width: 100%;
+	max-width: 64rem;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+header.primary
+{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: baseline;
+	gap: 0.25rem;
+	padding: 0 0 1rem 0;
+
+	min-width: 100%;
+	max-width: 100vw;
+}
+
+header.primary a
+{
+	display: inline-block;
+	text-decoration: none;
+
+	border-radius: 3px;
+	padding: 0.125rem 0.375rem;
+	color: var(--header-primary--link);
+	transition: 0.1s color, 0.1s background;
+}
+
+header.primary a[aria-selected]
+{
+	text-decoration: underline;
+}
+
+header.primary a:hover,
+header.primary a:focus
+{
+	color: var(--header-primary--link-focus);
+	background: var(--header-primary--link);
+}
+
+header.primary a.brand
+{
+	color: var(--header-primary--link-brand);
+	font-weight: bold;
+}
+
+header.primary a.brand:hover,
+header.primary a.brand:focus
+{
+	color: var(--header-primary--link-brand-focus);
+	background: var(--header-primary--link-brand);
+}
+
+.content-container h1
+{
+	margin: 0 0 1rem 0;
+	border-bottom: 1px solid var(--foreground);
+}
+
+footer.primary
+{
+	text-align: center;
+
+	padding: var(--footer-primary--padding) 0;
+	border-top: 1px solid var(--footer-primary--border);
+	font-size: var(--footer-primary--font-size);
+	background: var(--footer-primary--background);
+	color: var(--footer-primary--foreground);
+}
+
+footer.primary a,
+footer.primary a:focus,
+footer.primary a:hover,
+footer.primary a:visited
+{
+	text-decoration: underline;
+	border-bottom: 1px solid transparent;
+	color: var(--footer-primary--foreground);
+}
+
+footer.primary a:focus,
+footer.primary a:hover
+{
+	text-decoration: none;
+	border-bottom-color: var(--footer-primary--foreground);
+}
+
+.syscard
+{
+	display: grid;
+	grid-template-columns: var(--syscard--avatar-size) 1fr;
+	grid-column-gap: 1rem;
+	align-items: center;
+
+	background: var(--syscard--background);
+
+	padding: 1rem;
+	border: 1px solid var(--syscard--border);
+	border-radius: 3px;
+}
+
+.syscard:not(:last-child)
+{
+	margin-bottom: 1rem;
+}
+
+.syscard .syscard--avatar
+{
+	height: var(--syscard--avatar-size);
+	width: auto;
+
+	border: 3px solid var(--syscard--avatar-border);
+	border-radius: 3px;
+}
+
+.syscard .syscard--header
+{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: baseline;
+	justify-content: flex-start;
+	gap: 0.25rem;
+}
+
+.syscard .syscard--name
+{
+	margin: 0;
+}
+
+.syscard .syscard--pronouns::before
+{
+	content: ' (';
+}
+
+.syscard .syscard--pronouns::after
+{
+	content: ') ';
+}
+
+.syscard .syscard--description p
+{
+	margin: 0.5rem 0 0 0;
+}
+
+.syscard .syscard--badge
+{
+	margin: 0 0 0 0.25rem;
+	padding: 0.125rem 0.325rem;
+	border-radius: 3px;
+	font-size: 0.8rem;
+
+	background: var(--syscard--badge-background);
+	color: var(--syscard--badge-foreground);
+}
+
+ul.inline
+{
+	display: inline-block;
+	list-style: none outside none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.inline li
+{
+	display: inline-block;
+	list-style: none outside none;
+	padding: 0.5rem 0;
+	padding: 0;
+}
+
+ul.inline li:not(:last-child)::after
+{
+	content: '\0020\00b7\0020';
+}

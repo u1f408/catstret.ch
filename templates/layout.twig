@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/styles/main.css">
+	{%- if site.var.stylesheet_extra -%}
+	<link id="site--stylesheet-extra" rel="stylesheet" href="{{ site.var.stylesheet_extra }}">
+	{%- endif -%}
+
+	<title>{% if page.title %}{{ page.title }} &laquo; {% endif %}{{ site.var.title }}</title>
+</head>
+<body>
+	<div class="main-container">
+		{% include 'partials/header-primary.twig' %}
+
+		<div class="content-container">
+			{{ content | raw }}
+		</div>
+	</div>
+
+	{% include 'partials/footer-primary.twig' %}
+</body>
+</html>

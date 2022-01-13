@@ -1,0 +1,16 @@
+{%- for memberid in member_ids_fronting_first -%}
+{%- set member = system.members[memberid] -%}
+<section class="syscard" data-member="{{ memberid }}">
+	<img class="syscard--avatar" src="{{ member.avatar_url }}" style="border-color:#{{ member.color }}">
+
+	<div class="syscard--content">
+		<header class="syscard--header">
+			<h2 class="syscard--name">{{ member.name }}</h2>
+			<span class="syscard--pronouns">{{ member.pronouns }}</span>
+			{% if member.fronting %}<span class="badge syscard--badge">fronting!</span>{% endif %}
+		</header>
+
+		<div class="syscard--description">{{ member.description | raw }}</div>
+	</div>
+</section>
+{%- endfor -%}

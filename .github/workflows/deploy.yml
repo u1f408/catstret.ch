@@ -1,0 +1,29 @@
+name: "Deploy"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v20
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+        extra_nix_config: |
+          access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+    - run: nix develop --command bundle install
+    - run: nix develop --command bundle exec jekyll build 
+    - name: Deploy to BunnyCDN
+      uses: u1f408/bunnycdn-storage-deploy@main
+      with:
+        source: "_site"
+        storageEndpoint: "syd.storage.bunnycdn.com"
+        storageZoneName: "catstretch-web"
+        accessKey: "${{ secrets.CATSTRETCH_BUNNYCDN_STORAGE_KEY }}"
+        pullZoneId: "${{ secrets.CATSTRETCH_BUNNYCDN_PULLZONE_ID }}"
+        pullZoneAccessKey: "${{ secrets.BUNNYCDN_API_KEY }}"
+        remove: "true"
+        purge: "true"

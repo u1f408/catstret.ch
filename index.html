@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<h1>meow!</h1>
+<p>you have reached the Internet Website of the Iris System.</p>
+
+<section id="things">
+    <h2>things we've done</h2>
+    <ul>
+        <li>
+            <a href="//pluralkit.me">PluralKit</a>, a Discord bot for message proxying
+            &ndash; plus,
+            <a href="//irys.cc/#pluralkit">web tools</a> and
+            <a href="//github.com/u1f408/pkmisc">other scripts</a>
+            using the PluralKit API
+        </li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>in other places</h2>
+    <ul>
+        <li>github: <a href="//github.com/u1f408">u1f408</a></li>
+        <li>bluesky: <a href="//bsky.app/profile/catstret.ch">@catstret.ch</a></li>
+        <li>fediverse: <a href="//cloudisland.nz/@iris">@iris@cloudisland.nz</a></li>
+        <li>email: <code>hi AT this domain</code></li>
+    </ul>
+</section>
+
+<section id="posts">
+    <h2>blog posts</h2>
+    <ul>
+    {% for post in site.posts %}
+        <li>
+            <date datetime="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</date>
+            &ndash;
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</section>

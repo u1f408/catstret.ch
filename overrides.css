@@ -1,0 +1,10 @@
+/* this overrides some shit from https://assets.irys.cc/css/main.css */
+
+h1 {
+	margin: 1.25rem 0;
+}
+
+.post-header .post-meta {
+	position: relative;
+	margin-top: -0.75rem;
+}

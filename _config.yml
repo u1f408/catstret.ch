@@ -1,0 +1,16 @@
+title: catstret.ch
+baseurl: ""
+url: "https://catstret.ch"
+permalink: "/:year:month/:title:output_ext"
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - "*.nix"
+  - flake.lock

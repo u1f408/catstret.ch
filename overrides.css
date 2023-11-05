@@ -8,3 +8,9 @@ h1 {
 	position: relative;
 	margin-top: -0.75rem;
 }
+
+main img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}

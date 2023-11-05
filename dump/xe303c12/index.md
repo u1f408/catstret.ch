@@ -11,7 +11,11 @@ BL1 firmware [can be found here][5250bl1] (link to Google CrOS distfiles, bzip2'
 Attempting to use the default libreboot configs ([since removed, commit][lbcfg]) with
 inserted BL1 doesn't get far...
 
-Did support for this board ever make it into U-Boot upstream??
+## Using upstream U-Boot?
+
+Upstream U-Boot has `snow_defconfig` which does compile cleanly from a v2023.10 checkout,
+and gives us an SPL + U-Boot binary. Still need to see if the board will boot with an
+assembled image (BL1 + U-Boot SPL + U-Boot) programmed to the onboard SPI flash.
 
 ## Photos of the guts
 

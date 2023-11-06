@@ -23,6 +23,7 @@
           LD_LIBRARY_PATH = lib.makeLibraryPath devLibraries;
           buildInputs = devLibraries ++ (with pkgs; [
             ruby_3_2
+            jpegoptim
           ]);
         };
       });

@@ -3,6 +3,12 @@ baseurl: ""
 url: "https://catstret.ch"
 permalink: "/:year:month/:title:output_ext"
 
+kramdown:
+  parse_block_html: true
+  hard_wrap: false
+  gfm_quirks:
+    - paragraph_end
+
 plugins:
   - jekyll-feed
 

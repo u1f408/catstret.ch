@@ -16,3 +16,14 @@ main img {
     width: auto;
     height: auto;
 }
+
+blockquote ~ .quote-attr {
+    position: relative;
+    margin-top: -1rem;
+    padding: 0.5rem 1rem 0 1.5rem;
+    border-left: 2px solid var(--foreground);
+}
+
+blockquote ~ .quote-attr::before {
+    content: '\20\2014\20';
+}

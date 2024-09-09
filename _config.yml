@@ -20,3 +20,4 @@ exclude:
   - vendor/
   - "*.nix"
   - flake.lock
+  - bin/

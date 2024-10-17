@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<style>
+    .playlist-rows {
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.5rem;
+    }
+    .playlist-row {
+        list-style: none outside none;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .playlist-row .playlist-track-img {
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+    }
+    .playlist-row .playlist-track-img img {
+        border-radius: 2px;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<header class="page-header">
+    <h1><a href="/playlists/">playlist</a>: {{ page.title }}</h1>
+</header>
+
+<aside class="playlist-desc">
+    {{ content }}
+</aside>
+
+<ul class="playlist-rows">
+    {% for row in site.data.playlists[page.playlist_slug] %}
+        <li class="playlist-row">
+            <div class="playlist-track-img">
+                <img src="{{ row.img['80w'] }}" srcset="{{ row.img['40w'] }} 40w,{{ row.img['80w'] }} 80w" type="image/webp">
+            </div>
+            <div class="playlist-track-info">
+                <div class="playlist-track">
+                    <strong>{{ row.track }}</strong>
+                </div>
+                <div class="playlist-artist">
+                    by <span>{{ row.artist }}</span>
+                </div>
+                <div class="playlist-album">
+                    on <em>{{ row.album }}</em>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+</ul>

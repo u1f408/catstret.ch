@@ -4,9 +4,21 @@ subtitle: ... i got nerdsniped into doing this, of course
 layout: post
 ---
 
+someone in a discord server i'm in asked the question "how *do* you tell windows versions apart by looking at them?" - and thus, i had to put this together.
+
+this is not meant to be exhaustive (i'm not even going to *try* documenting betas...), and doesn't include server editions, but. here you go, nonetheless.
+
+## contents
+{:.no_toc}
+
+* replaced with table of contents
+{:toc}
+
+## release-by-release
+
 let's start at the top - by which i mean, the bottom, because windows 11 sucks.
 
-## Windows 11
+### Windows 11
 
 [![screenshot of the default Windows 11 taskbar][w11taskbar]][w11taskbar]
 
@@ -18,7 +30,7 @@ the taskbar is centre-aligned by default on Windows 11, but there's an option in
 [![screenshot of Windows 11][w11]][w11]
 </details>
 
-## Windows 10
+### Windows 10
 
 [![screenshot of the default Windows 10 taskbar][w10taskbar]][w10taskbar]
 
@@ -31,7 +43,7 @@ the Action Centre icon in the notification area (looks kinda like a speech bubbl
 [![screenshot of Windows 10][w10]][w10]
 </details>
 
-## Windows 8 / 8.1
+### Windows 8 / 8.1
 
 [![screenshot of the default Windows 8 taskbar][w80taskbar]][w80taskbar]
 
@@ -52,7 +64,7 @@ the notification area icons are a similar "flat outline" style to Windows 10, bu
 [![screenshot of Windows 8.1][w81]][w81]
 </details>
 
-## Windows 7
+### Windows 7
 
 [![screenshot of the default Windows 7 taskbar (Aero theme)][w7taskbar]][w7taskbar]
 
@@ -62,7 +74,10 @@ now we're getting back into the era of Windows where the "Classic" theme still e
 
 although Windows 7 is similar in style to Vista, Windows 7's "glass" effects are more translucent than Vista's.
 
-Windows 7 also has the "Aero Peek" button (hides all windows to show your desktop) on the very end (right side) of the taskbar - although this *can* be disabled, it almost never is.
+Windows 7's taskbar is notable for introducing the ability to "pin" programs to the taskbar, and for grouping all of a program's windows into a single icon on the taskbar.
+Windows 7 also adds the "Aero Peek" button (hides all windows to show your desktop) on the very end (right side) of the taskbar - although this *can* be disabled, it almost never is.
+
+see also: [Start button (Windows 7 vs. Windows Vista)](#comp-start-vista7)
 
 <details>
 <summary markdown='span'>Aero</summary>
@@ -74,13 +89,15 @@ Windows 7 also has the "Aero Peek" button (hides all windows to show your deskto
 [![screenshot of Windows 7's Classic theme][w7-classic]][w7-classic]
 </details>
 
-## Windows Vista
+### Windows Vista
 
 [![screenshot of the default Windows Vista taskbar (Aero theme)][wvtaskbar]][wvtaskbar]
 
 [![screenshot of the Windows Vista taskbar ("Classic" theme)][wvtaskbar-cl]][wvtaskbar-cl]
 
 Windows Vista's icons are - in general - a lot brighter than Windows 7's, and far more "glossy" than Windows XP's.
+
+see also: [Start button (Windows 7 vs. Windows Vista)](#comp-start-vista7)
 
 <details>
 <summary markdown='span'>Aero</summary>
@@ -92,7 +109,7 @@ Windows Vista's icons are - in general - a lot brighter than Windows 7's, and fa
 [![screenshot of Windows Vista's Classic theme][wv-classic]][wv-classic]
 </details>
 
-## Windows XP
+### Windows XP
 
 [![screenshot of the default Windows XP taskbar ("Luna" theme)][wxptaskbar]][wxptaskbar]
 
@@ -148,7 +165,7 @@ the defining characteristic for differentiating when looking at the Windows Clas
 [![screenshot of Windows XP Starter Edition's Classic theme][wxp-classicstarter]][wxp-classicstarter]
 </details>
 
-## Windows 2000
+### Windows 2000
 
 [![screenshot of the default Windows 2000 taskbar][w2ktaskbar]][w2ktaskbar]
 
@@ -161,7 +178,7 @@ the defining characteristic here, compared to older Windows versions, is the col
 [![screenshot of Windows 2000][w2k]][w2k]
 </details>
 
-## Windows NT 4.0
+### Windows NT 4.0
 
 [![screenshot of the default Windows NT 4.0 taskbar][nt4taskbar]][nt4taskbar]
 
@@ -174,11 +191,15 @@ i'll have to come back to this and figure out a better at-a-glance way to differ
 [![screenshot of Windows NT Workstation 4.0][nt4]][nt4]
 </details>
 
-## Windows 95 / 98 / ME
+### Windows 95 / 98 / ME
 
 [![screenshot of the default Windows 98 taskbar][w98taskbar]][w98taskbar]
 
-it's quite hard to tell 95 / 98 / ME apart at a glance, sorry. they're all effectively the same OS anyway.
+it's quite hard to tell 95 / 98 / ME apart at a glance, sorry.
+the things you'd think *might* be easy tells *aren't* - for example, Active Desktop, mainstay of 98 and ME... also shipped on 95, in the form of OSR2.5.
+ugh.
+
+they're all effectively the same OS anyway, who cares.
 
 <details>
 <summary markdown='span'>Windows 98 (with Active Desktop)</summary>
@@ -190,7 +211,7 @@ it's quite hard to tell 95 / 98 / ME apart at a glance, sorry. they're all effec
 [![screenshot of Windows 95][w95]][w95]
 </details>
 
-## Windows NT 3.x / Windows 3.x
+### Windows NT 3.x / Windows 3.x
 
 [![screenshot of the Windows NT 3.51 Program Manager][nt3x]][nt3x]
 
@@ -198,15 +219,53 @@ and this is now the pre-Windows Explorer era!
 
 if you're looking at a Program Manager screenshot, and it has a username in the title bar, it's Windows NT 3 - otherwise, it's Windows 3.
 
-## Windows 2.x (a.k.a. Windows/286 and Windows/386)
+### Windows 2.x (a.k.a. Windows/286 and Windows/386)
 
 [![screenshot of Windows/386 2.1][win2x]][win2x]
 
 i don't think i need to say anything here.
 
-## Windows 1.0
+### Windows 1.0
 
 [![screenshot of Windows 1.04][win1x]][win1x]
+
+i **really** don't think i need to say anything here.
+
+## comparisons
+
+### Start button (Windows 7 vs. Windows Vista)
+{: #comp-start-vista7}
+
+the Start button orb extends past the edge of the taskbar by default in Vista, but it can also do this on Windows 7 (if the option to use small taskbar icons is turned on):
+
+<table>
+<tr>
+<th markdown='span'>7 (small icons)</th>
+<th markdown='span'>7 (large icons)</th>
+</tr>
+<tr>
+<td markdown='span'>
+[![Windows 7 start button with small taskbar icons][w7start-small]][w7start-small]
+</td>
+<td markdown='span'>
+[![Windows 7 start button with large taskbar icons][w7start-large]][w7start-large]
+</td>
+</tr>
+<tr>
+<th markdown='span'>Vista (default)</th>
+<th markdown='span'>Vista (large taskbar)</th>
+</tr>
+<tr>
+<td markdown='span'>
+[![Windows Vista start button][wvstart-small]][wvstart-small]
+</td>
+<td markdown='span'>
+[![Windows Vista start button with the taskbar upsized one notch][wvstart-large]][wvstart-large]
+</td>
+</tr>
+</table>
+
+<!-- markdown image list below -->
 
 [w11taskbar]: https://archive.catstret.ch/winident/win11-taskbar.png
 [w11]: https://archive.catstret.ch/winident/win11.png
@@ -218,10 +277,14 @@ i don't think i need to say anything here.
 [w81]: https://archive.catstret.ch/winident/win81.png
 [w7taskbar]: https://archive.catstret.ch/winident/win7-aero-taskbar.png
 [w7taskbar-cl]: https://archive.catstret.ch/winident/win7-classic-taskbar.png
+[w7start-small]: https://archive.catstret.ch/winident/win7-start-small.png
+[w7start-large]: https://archive.catstret.ch/winident/win7-start-large.png
 [w7-aero]: https://archive.catstret.ch/winident/win7-aero.png
 [w7-classic]: https://archive.catstret.ch/winident/win7-classic.png
 [wvtaskbar]: https://archive.catstret.ch/winident/winvista-aero-taskbar.png
 [wvtaskbar-cl]: https://archive.catstret.ch/winident/winvista-classic-taskbar.png
+[wvstart-small]: https://archive.catstret.ch/winident/winvista-start-small.png
+[wvstart-large]: https://archive.catstret.ch/winident/winvista-start-large.png
 [wv-aero]: https://archive.catstret.ch/winident/winvista-aero.png
 [wv-classic]: https://archive.catstret.ch/winident/winvista-classic.png
 [wxptaskbar]: https://archive.catstret.ch/winident/winxp-luna-taskbar.png
@@ -245,5 +308,3 @@ i don't think i need to say anything here.
 [nt3x]: https://archive.catstret.ch/winident/nt3x.png
 [win2x]: https://archive.catstret.ch/winident/win2x.png
 [win1x]: https://archive.catstret.ch/winident/win1x.png
-
-i **really** don't think i need to say anything here.

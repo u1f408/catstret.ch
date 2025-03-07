@@ -8,6 +8,8 @@ someone in a discord server i'm in asked the question "how *do* you tell windows
 
 this is not meant to be exhaustive (i'm not even going to *try* documenting betas...), and doesn't include server editions, but. here you go, nonetheless.
 
+<!--cut-->
+
 ## contents
 {:.no_toc}
 
@@ -19,6 +21,7 @@ this is not meant to be exhaustive (i'm not even going to *try* documenting beta
 let's start at the top - by which i mean, the bottom, because windows 11 sucks.
 
 ### Windows 11
+{: #win11}
 
 [![screenshot of the default Windows 11 taskbar][w11taskbar]][w11taskbar]
 
@@ -31,6 +34,7 @@ the taskbar is centre-aligned by default on Windows 11, but there's an option in
 </details>
 
 ### Windows 10
+{: #win10}
 
 [![screenshot of the default Windows 10 taskbar][w10taskbar]][w10taskbar]
 
@@ -44,6 +48,7 @@ the Action Centre icon in the notification area (looks kinda like a speech bubbl
 </details>
 
 ### Windows 8 / 8.1
+{: #win8}
 
 [![screenshot of the default Windows 8 taskbar][w80taskbar]][w80taskbar]
 
@@ -65,6 +70,7 @@ the notification area icons are a similar "flat outline" style to Windows 10, bu
 </details>
 
 ### Windows 7
+{: #win7}
 
 [![screenshot of the default Windows 7 taskbar (Aero theme)][w7taskbar]][w7taskbar]
 
@@ -90,6 +96,7 @@ see also: [Start button (Windows 7 vs. Windows Vista)](#comp-start-vista7)
 </details>
 
 ### Windows Vista
+{: #winvista}
 
 [![screenshot of the default Windows Vista taskbar (Aero theme)][wvtaskbar]][wvtaskbar]
 
@@ -110,6 +117,7 @@ see also: [Start button (Windows 7 vs. Windows Vista)](#comp-start-vista7)
 </details>
 
 ### Windows XP
+{: #winxp}
 
 [![screenshot of the default Windows XP taskbar ("Luna" theme)][wxptaskbar]][wxptaskbar]
 
@@ -166,6 +174,7 @@ the defining characteristic for differentiating when looking at the Windows Clas
 </details>
 
 ### Windows 2000
+{: #win2k}
 
 [![screenshot of the default Windows 2000 taskbar][w2ktaskbar]][w2ktaskbar]
 
@@ -179,6 +188,7 @@ the defining characteristic here, compared to older Windows versions, is the col
 </details>
 
 ### Windows NT 4.0
+{: #winnt4}
 
 [![screenshot of the default Windows NT 4.0 taskbar][nt4taskbar]][nt4taskbar]
 
@@ -192,6 +202,7 @@ i'll have to come back to this and figure out a better at-a-glance way to differ
 </details>
 
 ### Windows 95 / 98 / ME
+{: #win9x}
 
 [![screenshot of the default Windows 98 taskbar][w98taskbar]][w98taskbar]
 
@@ -212,6 +223,7 @@ they're all effectively the same OS anyway, who cares.
 </details>
 
 ### Windows NT 3.x / Windows 3.x
+{: #win3x}
 
 [![screenshot of the Windows NT 3.51 Program Manager][nt3x]][nt3x]
 
@@ -220,12 +232,14 @@ and this is now the pre-Windows Explorer era!
 if you're looking at a Program Manager screenshot, and it has a username in the title bar, it's Windows NT 3 - otherwise, it's Windows 3.
 
 ### Windows 2.x (a.k.a. Windows/286 and Windows/386)
+{: #win2x}
 
 [![screenshot of Windows/386 2.1][win2x]][win2x]
 
 i don't think i need to say anything here.
 
 ### Windows 1.0
+{: #win1x}
 
 [![screenshot of Windows 1.04][win1x]][win1x]
 
@@ -236,7 +250,9 @@ i **really** don't think i need to say anything here.
 ### Start button (Windows 7 vs. Windows Vista)
 {: #comp-start-vista7}
 
-the Start button orb extends past the edge of the taskbar by default in Vista, but it can also do this on Windows 7 (if the option to use small taskbar icons is turned on):
+the Start button orb extends past the edge of the taskbar by default in Vista, but it can also do this on Windows 7 (if the option to use small taskbar icons is turned on).
+
+the "bloom" effect in the centre of the flag panels of the Windows logo is far more prominent on Vista than on 7 - especially so in the Classic theme's Start button.
 
 <table>
 <tr>

@@ -240,8 +240,10 @@ the Start button orb extends past the edge of the taskbar by default in Vista, b
 
 <table>
 <tr>
-<th markdown='span'>7 (small icons)</th>
-<th markdown='span'>7 (large icons)</th>
+<th markdown='span'>7 (Aero, small icons)</th>
+<th markdown='span'>7 (Aero, large icons)</th>
+<th markdown='span'>7 (Classic, small icons)</th>
+<th markdown='span'>7 (Classic, large icons)</th>
 </tr>
 <tr>
 <td markdown='span'>
@@ -250,10 +252,18 @@ the Start button orb extends past the edge of the taskbar by default in Vista, b
 <td markdown='span'>
 [![Windows 7 start button with large taskbar icons][w7start-large]][w7start-large]
 </td>
+<td markdown='span'>
+[![Windows 7 Classic start button with small taskbar icons][w7start-small-classic]][w7start-small-classic]
+</td>
+<td markdown='span'>
+[![Windows 7 Classic start button with large taskbar icons][w7start-large-classic]][w7start-large-classic]
+</td>
 </tr>
 <tr>
-<th markdown='span'>Vista (default)</th>
-<th markdown='span'>Vista (large taskbar)</th>
+<th markdown='span'>Vista (Aero, default)</th>
+<th markdown='span'>Vista (Aero, large taskbar)</th>
+<th markdown='span'>Vista (Classic, default)</th>
+<th markdown='span'>Vista (Classic, large taskbar)</th>
 </tr>
 <tr>
 <td markdown='span'>
@@ -261,6 +271,15 @@ the Start button orb extends past the edge of the taskbar by default in Vista, b
 </td>
 <td markdown='span'>
 [![Windows Vista start button with the taskbar upsized one notch][wvstart-large]][wvstart-large]
+</td>
+<td markdown='span'>
+[![Windows Vista Classic start button][wvstart-small-classic]][wvstart-small-classic]
+</td>
+<td>
+<div style="text-align:center">(...)</div>
+<!-- i haven't found a screenshot for this yet and i don't want to install vista in a VM for just this...
+[![Windows Vista Classic start button with the taskbar upsized one notch][wvstart-large]][wvstart-large]
+-->
 </td>
 </tr>
 </table>
@@ -279,12 +298,16 @@ the Start button orb extends past the edge of the taskbar by default in Vista, b
 [w7taskbar-cl]: https://archive.catstret.ch/winident/win7-classic-taskbar.png
 [w7start-small]: https://archive.catstret.ch/winident/win7-start-small.png
 [w7start-large]: https://archive.catstret.ch/winident/win7-start-large.png
+[w7start-small-classic]: https://archive.catstret.ch/winident/win7-start-small-classic.png
+[w7start-large-classic]: https://archive.catstret.ch/winident/win7-start-large-classic.png
 [w7-aero]: https://archive.catstret.ch/winident/win7-aero.png
 [w7-classic]: https://archive.catstret.ch/winident/win7-classic.png
 [wvtaskbar]: https://archive.catstret.ch/winident/winvista-aero-taskbar.png
 [wvtaskbar-cl]: https://archive.catstret.ch/winident/winvista-classic-taskbar.png
 [wvstart-small]: https://archive.catstret.ch/winident/winvista-start-small.png
 [wvstart-large]: https://archive.catstret.ch/winident/winvista-start-large.png
+[wvstart-small-classic]: https://archive.catstret.ch/winident/winvista-start-small-classic.png
+[wvstart-large-classic]: https://archive.catstret.ch/winident/winvista-start-large-classic.png
 [wv-aero]: https://archive.catstret.ch/winident/winvista-aero.png
 [wv-classic]: https://archive.catstret.ch/winident/winvista-classic.png
 [wxptaskbar]: https://archive.catstret.ch/winident/winxp-luna-taskbar.png

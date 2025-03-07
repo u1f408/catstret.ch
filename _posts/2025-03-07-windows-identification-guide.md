@@ -59,6 +59,8 @@ the Windows logo here is the same style as in Windows 10, but it's much larger i
 
 the notification area icons are a similar "flat outline" style to Windows 10, but the outlines are much thicker.
 
+see also: [Start screen differences between Windows 8 and 8.1](#comp-start-win8)
+
 <details>
 <summary markdown='span'>Windows 8</summary>
 [![screenshot of Windows 8][w80]][w80]
@@ -300,7 +302,38 @@ the "bloom" effect in the centre of the flag panels of the Windows logo is far m
 </tr>
 </table>
 
+### Start screen differences between Windows 8 and 8.1
+{: #comp-start-win8}
+
+Windows 8's "Metro" Start screen lacks the arrow icon at the bottom left (which is clickable to show the full app list) -
+this was added in Windows 8.1 (along with the Start button on the taskbar) to make things more mouse-friendly again.
+
+<table>
+<tr>
+<th markdown='span'>Windows 8 RTM</th>
+<th markdown='span'>Windows 8.1 RTM</th>
+</tr>
+<tr>
+<td markdown='span'>
+[![Windows 8 RTM start screen][w80startpage]][w80startpage]
+</td>
+<td markdown='span'>
+[![Windows 8.1 RTM start screen][w81startpage]][w81startpage]
+</td>
+</tr>
+</table>
+
+<details>
+<summary markdown='span'>Bonus: Windows RT 8.1's Start menu</summary>
+[The last update for Windows RT 8.1][betawiki_w81rt_upd3] added a real Start menu again!
+This was meant to be added to non-RT Windows 8.1 also, but the plans for that changed in favour of prioritising Windows 10... so Windows 8 never got a "normal" Start menu.
+
+[![Windows RT 8.1 start menu][w81rtstart]][w81rtstart]
+</details>
+
 <!-- markdown image list below -->
+
+[betawiki_w81rt_upd3]: https://betawiki.net/wiki/Windows_8.1_build_9600.17415
 
 [w11taskbar]: https://archive.catstret.ch/winident/win11-taskbar.png
 [w11]: https://archive.catstret.ch/winident/win11.png
@@ -310,6 +343,9 @@ the "bloom" effect in the centre of the flag panels of the Windows logo is far m
 [w81taskbar]: https://archive.catstret.ch/winident/win81-taskbar.png
 [w80]: https://archive.catstret.ch/winident/win80.png
 [w81]: https://archive.catstret.ch/winident/win81.png
+[w80startpage]: https://archive.catstret.ch/winident/win80-start.png
+[w81startpage]: https://archive.catstret.ch/winident/win81-start.png
+[w81rtstart]: https://archive.catstret.ch/winident/win81rt-start.png
 [w7taskbar]: https://archive.catstret.ch/winident/win7-aero-taskbar.png
 [w7taskbar-cl]: https://archive.catstret.ch/winident/win7-classic-taskbar.png
 [w7start-small]: https://archive.catstret.ch/winident/win7-start-small.png

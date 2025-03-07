@@ -4,6 +4,12 @@ h1 {
 	margin: 1.25rem 0;
 }
 
+.post-header h2 {
+    font-size: 1.125rem;
+    font-style: italic;
+    margin: -1rem 0 1.25rem 0;
+}
+
 .post-header .post-meta {
 	position: relative;
 	margin-top: -0.75rem;

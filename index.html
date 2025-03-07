@@ -33,9 +33,9 @@ layout: default
     <ul>
     {% for post in site.posts %}
         <li>
-            <date datetime="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</date>
-            &ndash;
+            <date datetime="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</date>:
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            {% if post.subtitle %}<br><em>{{ post.subtitle }}</em>{% endif %}
         </li>
     {% endfor %}
     </ul>

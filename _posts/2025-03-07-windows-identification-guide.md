@@ -506,9 +506,9 @@ Windows ME uses the icons & colour scheme as Windows 2000, but uses the same UI 
 
 [![screenshot of the Windows NT 3.51 Program Manager][nt3x]][nt3x]
 
-and this is now the pre-Show Desktop era!
+and this is now the pre-Windows Explorer era!
 
-if you're looking at a Program Manager screenshot, and it has a username in the title bar, it's Windows NT 3 - otherwise, it's Windows 3.
+if you're looking at a Program Manager screenshot, and it has a `DOMAIN\username` in the title bar, it's Windows NT 3.x - otherwise, it's Windows 3.
 
 [nt3x]: https://archive.catstret.ch/winident/nt3x.png
 

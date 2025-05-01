@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/release-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
     fu.url = "github:numtide/flake-utils";
     compat = {
       url = "github:edolstra/flake-compat";
@@ -16,6 +16,7 @@
 
         devLibraries = with pkgs; [
           curl
+          libffi
         ];
 
       in {

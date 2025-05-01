@@ -2,6 +2,9 @@
 title: a semi-correct windows screenshot identification guide
 subtitle: ... i got nerdsniped into doing this, of course
 layout: post
+tags:
+  - deepdive
+  - mswindows
 ---
 
 someone in a discord server i'm in asked the question "how *do* you tell windows versions apart by looking at them?" - and thus, i had to put this together.

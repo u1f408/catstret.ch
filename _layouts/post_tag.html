@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<header class="page-header">
+    <h1>tag: #{{ page.title | escape }}</h1>
+</header>
+
+{{ content }}
+
+<section class="tagPosts">
+    {% assign tag_posts = site.tags[page.slug] %}
+    <ul>
+        {% for post in tag_posts %}
+        <li>
+            {% include post_list_entry.html post=post %}
+        </li>
+        {% endfor %}
+    </ul>
+</section>

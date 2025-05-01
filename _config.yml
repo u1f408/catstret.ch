@@ -13,12 +13,26 @@ kramdown:
 plugins:
   - jekyll-feed
 
+collections:
+  post_tags:
+    permalink: "/tag/:name/"
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+      type: post_tags
+    values:
+      permalink: "/tag/:name/"
+      layout: post_tag
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/
   - Gemfile
   - Gemfile.lock
   - vendor/
-  - "*.nix"
+  - flake.nix
+  - shell.nix
   - flake.lock
   - bin/

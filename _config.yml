@@ -3,6 +3,7 @@ baseurl: ""
 url: "https://catstret.ch"
 permalink: "/:year:month/:title:output_ext"
 excerpt_separator: <!--cut-->
+future: true
 
 kramdown:
   parse_block_html: true

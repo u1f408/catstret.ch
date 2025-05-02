@@ -19,9 +19,23 @@ layout: default
                 {%- endfor -%}
             </li>
             {%- endif -%}
-            <li><a href="{{ page.url | absolute_url }}">permalink</a></li>
         </ul>
     </aside>
 </header>
 
 {{ content }}
+
+<footer class="post-footer">
+    <p>
+        {% capture commentEmailSubject %}re: {{ page.title }}{% endcapture %}
+        <a href="mailto:blog@catstret.ch?subject={{ commentEmailSubject | uri_escape }}"><!--
+            -->thoughts? comments? send us an email!<!--
+        --></a>
+
+        (there's no public comment section, because trying to fight the spam is a sisyphean endeavour)
+    </p>
+
+    <p>
+        permalink: <a class="monospace" href="{{ page.url | absolute_url }}">{{ page.url | absolute_url }}</a>
+    </p>
+</footer>

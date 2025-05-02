@@ -40,6 +40,8 @@ let
 
     extraOutputsToInstall = [ "dev" ];
     extraBuildCommands = ''
+      # grub2 source expects unifont to be in /usr/share/fonts/unifont, but adding unifont
+      # to targetPkgs above will put it in /usr/share/fonts directly, so symlink it in place
       mkdir -p $out/usr/share/fonts
       ln -s ${pkgs.unifont}/share/fonts $out/usr/share/fonts/unifont
     '';

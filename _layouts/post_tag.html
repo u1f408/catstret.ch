@@ -9,11 +9,9 @@ layout: default
 
 <section class="tagPosts">
     {% assign tag_posts = site.tags[page.slug] %}
-    <ul>
-        {% for post in tag_posts %}
-        <li>
-            {% include post_list_entry.html post=post %}
-        </li>
-        {% endfor %}
+    <ul class="post-list">
+    {% for post in tag_posts %}
+        {% include post_list_entry.html post=post %}
+    {% endfor %}
     </ul>
 </section>

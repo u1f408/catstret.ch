@@ -11,7 +11,7 @@ layout: default
     <aside class="post-meta">
         <ul class="inline-list">
             <li><date datetime="{{ page.date | date_to_xmlschema }}" title="{{ page.date | date_to_xmlschema }}">posted on {{ page.date | date_to_long_string }}</date></li>
-            {%- if page.tags -%}
+            {%- if page.tags.size > 0 -%}
             <li>
                 tags:
                 {%- for tag in page.tags %}

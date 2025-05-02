@@ -30,11 +30,9 @@ layout: default
 <section id="posts">
     <h2>blog posts</h2>
     <p><a href="/feed.xml">there is an RSS feed here too!</a></p>
-    <ul>
+    <ul class="post-list">
     {% for post in site.posts %}
-        <li>
-            {% include post_list_entry.html post=post %}
-        </li>
+        {% include post_list_entry.html post=post %}
     {% endfor %}
     </ul>
 </section>

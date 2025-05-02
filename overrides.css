@@ -1,5 +1,21 @@
 /* this overrides some shit from https://assets.irys.cc/css/main.css */
 
+:root {
+    --post-list-entry--background: #fcfcfd;
+    --post-list-entry--foreground: var(--foreground);
+    --post-list-entry--meta--foreground: #57575b;
+    --post-list-entry--link--foreground: var(--link--foreground);
+    --post-list-entry--border-color: #0d0d0d;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --post-list-entry--background: #0d0d26;
+        --post-list-entry--meta--foreground: #c7c7d1;
+        --post-list-entry--border-color: #fcfcfc;
+    }
+}
+
 h1 {
 	margin: 1.25rem 0;
 }
@@ -47,4 +63,45 @@ blockquote ~ .quote-attr {
 
 blockquote ~ .quote-attr::before {
     content: '\20\2014\20';
+}
+
+figure {
+    margin: 0;
+}
+
+.post-list {
+    list-style: none outside none;
+    padding: 0;
+}
+
+.post-list-entry {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0.25rem 0.5rem;
+    color: var(--post-list-entry--foreground);
+    background: var(--post-list-entry--background);
+    border: 1px solid var(--post-list-entry--border-color);
+    border-radius: 3px;
+
+    .post-list-entry--title {
+        font-size: 1.25rem;
+        text-decoration: none;
+        color: var(--post-list-entry--link--foreground);
+        border-bottom: 1px solid var(--post-list-entry--foreground);
+        margin-bottom: 0.25rem;
+    }
+
+    .post-list-entry--subtitle {
+        font-style: italic;
+        margin-bottom: 0.25rem;
+    }
+
+    .post-list-entry--meta {
+        color: var(--post-list-entry--meta--foreground);
+        font-size: 0.8rem;
+
+        a, a:visited {
+            color: var(--post-list-entry--meta-foreground);
+        }
+    }
 }

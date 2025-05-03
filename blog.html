@@ -1,0 +1,29 @@
+---
+title: blog posts
+permalink: /blog/
+layout: page
+---
+
+<p>
+    {% include blog_feed_link.html text="subscribe in your favourite feed reader!" %}
+</p>
+
+{% for post in site.posts %}
+    {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+    {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+    {% if month != nmonth %}
+    {% if forloop.index != 1 %}
+    </ul></section>
+    {% endif %}
+
+    <section id="{{ post.date | date: '%Y%m' }}">
+    <h2>{{ post.date | date: '%B %Y' }}</h2>
+    <ul class="post-list">
+    {% endif %}
+
+    {% include post_list_entry.html post=post %}
+
+    {% if forloop.last %}
+    </ul></section>
+    {% endif %}
+{% endfor %}

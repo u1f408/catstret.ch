@@ -2,13 +2,13 @@
     class="post-list-entry"
     data-post-tags="{% for tag in include.post.tags %}{{ tag | escape }} {% endfor %}"
 >
-    <a class="post-list-entry--title" href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></span>
+    <a class="post-list-entry--title" href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
     {%- if include.post.subtitle -%}
     <span class="post-list-entry--subtitle">{{ include.post.subtitle }}</span>
     {%- endif -%}
     <ul class="inline-list post-list-entry--meta">
         {%- capture date_xml %}{{ include.post.date | date_to_xmlschema }}{% endcapture -%}
-        {%- capture date %}{{ include.post.date | date_to_long_string }}{% endcapture -%}
+        {%- capture date %}{{ include.post.date | date: "%e %B %Y" }}{% endcapture -%}
         <li><date datetime="{{ date_xml }}" title="{{ date_xml }}">{{ date }}</date></li>
 
         {%- if include.post.tags.size > 0 -%}

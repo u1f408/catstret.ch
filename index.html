@@ -4,6 +4,17 @@ layout: default
 <h1>meow!</h1>
 <p>you have reached the Internet Website of the Iris System.</p>
 
+<section id="bloglatest">
+    <h2>latest blog post</h2>
+    <ul class="post-list">
+        {% include post_list_entry.html post=site.posts.first %}
+    </ul>
+    <p>
+        <a href="{{ site.baseurl }}/blog/">browse the rest of the blog</a>,
+        or {% include blog_feed_link.html text="subscribe to the RSS feed" %}
+    </p>
+</section>
+
 <section id="things">
     <h2>things we've done</h2>
     <ul>
@@ -24,22 +35,5 @@ layout: default
         <li>bluesky: <a rel="me" href="https://bsky.app/profile/catstret.ch">@catstret.ch</a></li>
         <li>fediverse: <a rel="me" href="https://cloudisland.nz/@iris">@iris@cloudisland.nz</a></li>
         <li>email: <a href="mailto:hi@catstret.ch">hi@catstret.ch</a></li>
-    </ul>
-</section>
-
-<section id="posts">
-    <h2>blog posts</h2>
-    <p><a href="/feed.xml">there is an RSS feed here too!</a></p>
-    <ul class="post-list">
-    {% for post in site.posts %}
-        {% include post_list_entry.html post=post %}
-    {% endfor %}
-    </ul>
-</section>
-
-<section id="misc">
-    <h2>other stuff</h2>
-    <ul>
-        <li><a href="/playlists/">our music playlists</a></li>
     </ul>
 </section>

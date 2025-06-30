@@ -1,0 +1,16 @@
+{
+  "policies": {
+    "DontCheckDefaultBrowser": true,
+    "SkipTermsOfUse": true,
+    "Preferences": {
+      "browser.startup.upgradeDialog.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.startup.homepage_override.mstone": {
+        "Value": "ignore",
+        "Status": "locked"
+      }
+    }
+  }
+}

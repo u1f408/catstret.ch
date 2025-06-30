@@ -100,11 +100,10 @@ after unpacking the Sun Ray Server Software installers (both the Solaris and Lin
 
 <details>
 <summary markdown='span'>the `update_dhcp_dependency` script, for posterity</summary>
-{% highlight shell %}
-{% include_snippet openindiana-srss-update_dhcp_dependency.sh %}
-{% endhighlight %}
 
-([direct link]({{ site.baseurl }}/snippets/openindiana-srss-update_dhcp_dependency.sh))
+{% fcb lang=shell name="update_dhcp_dependency" slug="srss-dhcpdep" raw="/snippets/openindiana-srss-update_dhcp_dependency.sh" %}
+{% include_snippet openindiana-srss-update_dhcp_dependency.sh %}
+{% endfcb %}
 </details>
 
 to make SRSS happy with isc-dhcp:
@@ -117,11 +116,11 @@ to make SRSS happy with isc-dhcp:
 # ln -s /opt/SUNWut/lib/dhcp/isc /etc/opt/SUNWut/dhcp
 ```
 
-then apply [the needed patch]({{ site.baseurl }}/snippets/openindiana-srss-utadm.patch) to `/opt/SUNWut/sbin/utadm`:
+then apply the needed patch to `/opt/SUNWut/sbin/utadm`:
 
-{% highlight patch %}
+{% fcb lang=patch name="openindiana-srss-utadm.patch" slug="srss-utadm" raw="/snippets/openindiana-srss-utadm.patch" %}
 {% include_snippet openindiana-srss-utadm.patch %}
-{% endhighlight %}
+{% endfcb %}
 
 now, get the ancient JRE in place:
 
@@ -192,22 +191,14 @@ i wanted to be able to specify what RDP server each token would connect to. this
 
 after much trial and error, i got something working!
 
-<details>
-<summary markdown='span'>`/etc/opt/SUNWkio/sessions/freerdp.conf`</summary>
-```shell
+{% fcb lang=shell name="/etc/opt/SUNWkio/sessions/freerdp.conf" slug="freerdp-session" %}
 KIOSK_SESSION_EXEC=$KIOSK_SESSION_DIR/freerdp
 KIOSK_SESSION_LABEL="FreeRDP session"
-```
-</details>
+{% endfcb %}
 
-<details>
-<summary markdown='span'>`/etc/opt/SUNWkio/sessions/freerdp/freerdp`</summary>
-{% highlight shell %}
+{% fcb lang=shell name="/etc/opt/SUNWkio/sessions/freerdp/freerdp" slug="freerdp-script" raw="/snippets/openindiana-srss-freerdp.sh" %}
 {% include_snippet openindiana-srss-freerdp.sh %}
-{% endhighlight %}
-
-([direct link]({{ site.baseurl }}/snippets/openindiana-srss-freerdp.sh))
-</details>
+{% endfcb %}
 
 after throwing those in place, install the dependencies and configure the session:
 
@@ -237,32 +228,24 @@ upon inserting that token into a client...
 
 with much the same setup as the RDP sessions, it's pretty easy to start a kiosk-mode Firefox, pulling the URL to open from the token data:
 
-<details>
-<summary markdown='span'>`/etc/opt/SUNWkio/sessions/kiosk-browser.conf`</summary>
-```shell
+{% fcb lang=shell name="/etc/opt/SUNWkio/sessions/kiosk-browser.conf" slug="kioskbrowser-session" %}
 KIOSK_SESSION_EXEC=$KIOSK_SESSION_DIR/kiosk-browser
 KIOSK_SESSION_LABEL="Kiosk Browser"
-```
-</details>
+{% endfcb %}
 
-<details>
-<summary markdown='span'>`/etc/opt/SUNWkio/sessions/kiosk-browser/kiosk-browser`</summary>
-{% highlight shell %}
+{% fcb lang=shell name="/etc/opt/SUNWkio/sessions/kiosk-browser/kiosk-browser" slug="kioskbrowser-script" raw="/snippets/openindiana-srss-kiosk-browser.sh" %}
 {% include_snippet openindiana-srss-kiosk-browser.sh %}
-{% endhighlight %}
-
-([direct link]({{ site.baseurl }}/snippets/openindiana-srss-kiosk-browser.sh))
-</details>
+{% endfcb %}
 
 i needed to hide the mouse cursor, and `unclutter` simply *does not* work in Sun Ray sessions, so i went with an invisible cursor theme - <https://github.com/l-theanine/invisible-cursor-theme> works well.
 
 a problem, though. Firefox would show its first-run "Welcome to Firefox" popup... every time. Sun Ray kiosk sessions run as a random user named  `utkuXX` (where `XX` is a number), and after the kiosk session ends the home directory of the kiosk user gets fully deleted, so the user can be recycled for other sessions. given i wanted to use this with some always-on Sun Rays, with no input devices attached... 
 
-thankfully, Firefox policies allow turning that off! throwing [a particular hunk of JSON]({{ site.baseurl }}/snippets/openindiana-srss-firefox-policies.json) into `/etc/firefox/policies/policies.json` fixed that:
+thankfully, Firefox policies allow turning that off! throwing this hunk of JSON into `/etc/firefox/policies/policies.json` fixed that:
 
-{% highlight json %}
+{% fcb lang=json name="/etc/firefox/policies/policies.json" slug="firefoxpolicy" raw="/snippets/openindiana-srss-firefox-policies.json" %}
 {% include_snippet openindiana-srss-firefox-policies.json %}
-{% endhighlight %}
+{% endfcb %}
 
 and with that, i could create a token for an individual client (the tokens for this are `pseudo.<MAC>`, where the MAC is all lower-case), set that token's "Other Info" field to the URL to show, and assign the kiosk session to that pseudo-token the same way as with smart card tokens.
 

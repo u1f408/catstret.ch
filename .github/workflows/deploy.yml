@@ -15,7 +15,7 @@ jobs:
         extra_nix_config: |
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
     - run: nix develop --command bundle install
-    - run: nix develop --command env TZ=Pacific/Auckland bundle exec jekyll build
+    - run: nix develop --command env TZ=Pacific/Auckland JEKYLL_ENV=production bundle exec jekyll build
     - name: Deploy to BunnyCDN
       uses: u1f408/bunnycdn-storage-deploy@main
       with:

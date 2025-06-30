@@ -19,6 +19,9 @@
     {% else %}
         <meta property="og:type" content="website">
     {% endif %}
+    {% if jekyll.environment == "production" %}
+        <script defer src="https://analytics.soupnet.cc/script.js" data-website-id="9862bfb3-c88c-4466-8e8a-f1d567562f97"></script>
+    {% endif %}
 </head>
 <body>
     {{ content }}
